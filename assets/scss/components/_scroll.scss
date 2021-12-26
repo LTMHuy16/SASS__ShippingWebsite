@@ -1,0 +1,45 @@
+/* ===================== SCROLL ========================= */
+.scrollUp {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  z-index: var(--z-tooltip);
+  display: flex;
+  padding: .3rem;
+  border-radius: .25rem;
+  background-color: var(--first-color);
+  opacity: 0.8;
+  transition: all .2s linear;
+
+  &.show-scroll {
+    bottom: 3rem;
+  }
+
+  &:hover {
+    background-color: var(--first-color-alt);
+    opacity: 1;
+  }
+
+  &__icon {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+  }
+}
+
+/* ===================== SCROLL BAR ========================= */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: .5rem;
+  background-color: var(--scrollbar-color);
+
+  &-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: .5rem;
+
+    &:hover {
+      background-color: var(--text-color-light);
+    }
+  }
+}
+
